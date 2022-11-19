@@ -1,7 +1,7 @@
 <template>
   <section class="titulo">
     <h1>{{ h1 }}</h1>
-    <img src="../assets/decor.svg" alt="Decorador" v-if="hasDecor" />
+    <img src="../assets/decor.svg" alt="Decorador" v-if="hasDeCor" />
     <slot class="slot"></slot>
   </section>
 </template>
@@ -9,7 +9,16 @@
 <script>
 export default {
   name: "TheTitulo",
-  props: ["h1", "hasDecor"],
+  props: {
+    h1: {
+      type: String,
+      require: true,
+    },
+    hasDeCor: {
+      type: Boolean,
+      require: true,
+    },
+  },
 };
 </script>
 

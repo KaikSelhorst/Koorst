@@ -47,13 +47,17 @@ img {
   padding-left: 200px;
 }
 
-.container {
+.container,
+.grid-container {
   max-width: 955px;
   /* Warning */
   /* margin: 0 auto; */
   /* Warning */
 }
-
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 .v-enter,
 .v-leave-to {
   opacity: 0;
@@ -68,5 +72,25 @@ img {
 .v-enter-active,
 .v-leave-active {
   transition: all 0.3s;
+}
+
+h2 {
+  color: #292929;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  font-family: "Rubik", sans-serif;
+  letter-spacing: 0.05rem;
+  position: relative;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+h2::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 18px;
+  height: 24px;
+  left: -24px;
+  background: url("./assets/decor_font.svg") no-repeat center;
 }
 </style>
