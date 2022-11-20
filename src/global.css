@@ -1,0 +1,73 @@
+/* Tipografias */
+
+/* 48px / 64px */
+.xxl-1-r {
+  font: 700 3rem/4rem "Rubik", sans-serif;
+  letter-spacing: 0.05rem;
+}
+
+/* 36px / 48px */
+.l-1-r {
+  font: 700 2.25rem/3rem "Rubik", sans-serif;
+  letter-spacing: 0.05rem;
+}
+
+/* 32px / 38px */
+.l-2-r {
+  font: 700 2rem/2.375rem "Rubik", sans-serif;
+  letter-spacing: 0.05rem;
+}
+
+/* 24px / 36px */
+.m-1-e {
+  font: 400 1.5rem/2.25rem "Eczar", sans-serif;
+  letter-spacing: 0.01rem;
+}
+
+/* 24px / 32px */
+.m-1-r {
+  font: 500 1.5rem/2rem "Rubik", sans-serif;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+}
+/* 18px / 32px */
+.s-1-r {
+  font: 700 1.125rem/2rem "Rubik", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.01rem;
+}
+/* 18px / 32px */
+.s-2-r {
+  font: 500 1.125rem/2rem "Rubik", sans-serif;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+}
+.s-3-r,
+.s-4-r {
+  font: 500 1.125rem/2rem "Rubik", sans-serif;
+  letter-spacing: 0.05rem;
+}
+.s-4-r {
+  letter-spacing: 0.01rem;
+}
+/* 18px / 32px */
+.s-1-e {
+  font: 400 1.125rem/2rem "Eczar", sans-serif;
+  letter-spacing: 0.01rem;
+}
+
+/* 16px / 32px */
+.xs-1-r,
+.xs-1-r-t {
+  font: 700 1rem/2rem "Rubik", sans-serif;
+  letter-spacing: 0.01rem;
+}
+.xs-1-r-t {
+  text-transform: uppercase;
+}
+
+/* 16px / 24px */
+.xs-2-r {
+  font: 500 1rem/1.5rem "Rubik", sans-serif;
+  letter-spacing: 0.05rem;
+}

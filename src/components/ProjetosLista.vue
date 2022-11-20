@@ -4,11 +4,11 @@
       <li v-for="(projeto, index) in projetos" :key="index">
         <a href="" class="projetoItem">
           <div class="projetoItemTexto">
-            <span>{{ projeto.data }}</span>
-            <h3>{{ projeto.name }}</h3>
-            <p>{{ projeto.texto }}</p>
+            <span class="s-1-e">{{ projeto.data }}</span>
+            <h3 class="l-1-r">{{ projeto.name }}</h3>
+            <p class="s-1-e">{{ projeto.texto }}</p>
           </div>
-          <span>00{{ index + 1 }}</span>
+          <span class="xxl-1-r">00{{ index + 1 }}</span>
         </a>
       </li>
     </ul>
@@ -61,33 +61,15 @@ li + li {
 .projetoItem > span {
   grid-column: 2;
   color: #292929;
-  font-weight: 700;
-  font-family: "Rubik", sans-serif;
-  font-size: 3rem;
-  letter-spacing: 0.05rem;
-  line-height: 3.5rem;
 }
 .projetoItemTexto span {
   margin-bottom: 8px;
-  font-size: 1.125rem;
-  font-family: "Eczar", serif;
-  line-height: 2rem;
-  letter-spacing: 0.05rem;
   color: #a3a3a3;
 }
 .projetoItemTexto h3 {
-  font-family: "Rubik", sans-serif;
-  font-weight: 700;
-  letter-spacing: 0.05rem;
-  font-size: 2.25rem;
-  line-height: 3rem;
   color: #141414;
 }
 .projetoItemTexto p {
-  font-size: 1.125rem;
-  line-height: 2rem;
-  letter-spacing: 0.01rem;
-  font-family: "Eczar", serif;
   max-width: 640px;
   color: #141414;
 }

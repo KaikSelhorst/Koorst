@@ -1,11 +1,11 @@
 <template>
   <section class="container" v-if="dadosApi">
     <TheTitulo :h1="dadosApi.title" :hasDecor="true" />
-    <p>{{ dadosApi.texto }}</p>
+    <p class="s-1-e">{{ dadosApi.texto }}</p>
 
     <ul v-if="dadosApi.redes">
       <li v-for="(rede, key) in dadosApi.redes" :key="key">
-        <a :href="rede.url" target="_blank">{{ rede.name }}</a>
+        <a :href="rede.url" target="_blank" class="s-4-r">{{ rede.name }}</a>
       </li>
     </ul>
   </section>
@@ -27,11 +27,7 @@ export default {
 p {
   margin-top: 96px;
   margin-bottom: 24px;
-  font-family: "Eczar", serif;
-  font-size: 1.125rem;
-  line-height: 2rem;
   max-width: 500px;
-  letter-spacing: 0.01rem;
   color: #141414;
 }
 ul {
@@ -39,14 +35,9 @@ ul {
   gap: 8px;
 }
 a {
-  font-weight: 500;
-  font-family: "Rubik", sans-serif;
-  font-size: 1.125rem;
-  line-height: 2rem;
   color: #3d3d3d;
   display: inline-block;
   position: relative;
-  letter-spacing: 0.01rem;
 }
 a::before {
   content: "";

@@ -3,7 +3,7 @@
     <!-- DadosApi é uma variavel que vem do Mixins[Api] -->
     <div>
       <TheTitulo class="titulo" :h1="dadosApi.title" :hasDecor="false">
-        <p>{{ dadosApi.texto }}</p>
+        <p class="m-1-e">{{ dadosApi.texto }}</p>
       </TheTitulo>
       <div>
         <img src="../assets/home_ilustracao.jpg" alt="Koorst" />
@@ -29,11 +29,8 @@ export default {
   margin-bottom: 40px;
 }
 p {
-  font-family: "Eczar", serif;
   color: #292929;
-  font-size: 1.5rem;
   position: relative;
-  line-height: 2.25rem;
   max-width: 400px;
 }
 p::before {

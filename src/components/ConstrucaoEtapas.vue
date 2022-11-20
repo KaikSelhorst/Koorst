@@ -6,6 +6,7 @@
         :key="etapa.title + key"
         @click="onClick(key)"
         data-tab="title"
+        class="s-3-r"
       >
         <span>{{ key + 1 }}.</span>
         {{ etapa.title }}
@@ -17,6 +18,7 @@
       :key="key"
       :aria-label="etapa.title"
       data-tab="content"
+      class="s-1-e"
     >
       {{ etapa.texto }}
     </p>
@@ -103,10 +105,6 @@ export default {
 }
 .etapas p {
   display: none;
-  font-size: 1.125rem;
-  line-height: 2rem;
-  font-family: "Eczar", serif;
-  letter-spacing: 0.01rem;
   color: #a3a3a3;
   grid-column: 1 / -1;
   animation: fade 0.3s forwards;
@@ -128,11 +126,6 @@ export default {
   display: flex;
   cursor: pointer;
   gap: 1px;
-  font-weight: 500;
-  font-size: 1.125rem;
-  line-height: 2rem;
-  letter-spacing: 0.05rem;
-  font-family: "Rubik", sans-serif;
   align-items: center;
   color: #3d3d3d;
 }

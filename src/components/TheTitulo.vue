@@ -1,11 +1,13 @@
 <template>
   <section class="titulo">
-    <h1 :class="{ dark: dark }">{{ h1 }}</h1>
+    <h1 :class="{ dark: dark }" class="l-2-r">{{ h1 }}</h1>
     <div v-if="hasDecor" class="decorador">
       <img src="../assets/decor_dark.svg" alt="Decorador" v-if="dark" />
       <img src="../assets/decor.svg" alt="Decorador" v-else />
     </div>
-    <slot class="slot"></slot>
+    <div class="slot">
+      <slot></slot>
+    </div>
   </section>
 </template>
 
@@ -41,13 +43,8 @@ export default {
 }
 h1 {
   max-width: 310px;
-  font-family: "Rubik", sans-serif;
-  font-size: 2rem;
   text-transform: uppercase;
   color: #292929;
-  line-height: 2.375rem;
-  letter-spacing: 0.05rem;
-  font-weight: 700;
 }
 h1.dark {
   color: #fafafa;

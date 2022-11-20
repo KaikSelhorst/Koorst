@@ -11,11 +11,12 @@
           />
         </div>
         <div class="projetos_texto">
-          <h2>Sobre</h2>
+          <h2 class="m-1-r">Sobre</h2>
           <p
             v-for="(frase, index) in dadosApi.texto"
             :key="index"
             v-html="frase"
+            class="s-1-e"
           ></p>
         </div>
       </div>
@@ -24,9 +25,9 @@
     <!-- componente não deve respeitar a .container -->
     <ProjetosConstrucao :construcao="dadosApi.construcao" />
     <div class="container contato">
-      <span>Precisa de algum design ou desenvolvedor</span>
+      <span class="xs-2-r">Precisa de algum design ou desenvolvedor</span>
       <router-link :to="{ name: 'contato' }">
-        <h1>Vamos trabalhar juntos</h1>
+        <h1 class="xxl-1-r">Vamos trabalhar juntos</h1>
       </router-link>
     </div>
   </section>
@@ -60,15 +61,9 @@ h2 {
 }
 
 p {
-  letter-spacing: 0.01rem;
   color: #141414;
   text-indent: 24px;
-  font-size: 1.125rem;
-  font-family: "Eczar", serif;
-  line-height: 2em;
-  color: #141414;
   display: block;
-
   max-width: 450px;
 }
 p + p {
@@ -85,25 +80,18 @@ p + p {
 }
 .contato span {
   color: #7a7a7a;
-  font-family: "Rubik", sans-serif;
-  letter-spacing: 0.05rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
 }
 .contato h1 {
   color: #292929;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3rem;
-  line-height: 4rem;
-  font-family: "Rubik", sans-serif;
-  letter-spacing: 0.05rem;
+  gap: 16px;
 }
 .contato h1::after {
   content: "";
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   display: block;
   position: relative;
   background: url("../assets/seta.svg") no-repeat center;

@@ -25,6 +25,7 @@ export default {
 };
 </script>
 <style>
+@import url("./global.css");
 * {
   margin: 0;
   padding: 0;
@@ -77,12 +78,7 @@ img {
 
 h2 {
   color: #292929;
-  font-size: 1.5rem;
-  line-height: 1.75rem;
-  font-family: "Rubik", sans-serif;
-  letter-spacing: 0.05rem;
   position: relative;
-  font-weight: 500;
   text-transform: uppercase;
 }
 h2::before {

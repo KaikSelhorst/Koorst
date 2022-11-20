@@ -6,8 +6,8 @@
       </TheTitulo>
     </div>
     <div class="grid">
-      <h2>Sobre</h2>
-      <p v-html="dadosApi.texto"></p>
+      <h2 class="m-1-r">Sobre</h2>
+      <p v-html="dadosApi.texto" class="s-1-e"></p>
       <div class="sobre_img">
         <img
           src="../assets/sobre_ilustracao.jpg"
@@ -41,12 +41,8 @@ export default {
   margin-bottom: 96px;
 }
 p {
-  letter-spacing: 0.01rem;
-  color: #141414;
-  font-size: 1.125rem;
   margin-bottom: 96px;
-  font-family: "Eczar", serif;
-  line-height: 2em;
+  max-width: 430px;
   color: #141414;
 }
 p::first-letter {
