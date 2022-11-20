@@ -1,7 +1,7 @@
 <template>
-  <section v-if="dadosApi">
+  <section v-if="dadosApi" class="container">
     <!-- DadosApi é uma variavel que vem do Mixins[Api] -->
-    <div class="container">
+    <div>
       <TheTitulo class="titulo" :h1="dadosApi.title" :hasDecor="false">
         <p>{{ dadosApi.texto }}</p>
       </TheTitulo>

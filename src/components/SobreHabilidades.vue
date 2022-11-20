@@ -1,7 +1,7 @@
 <template>
-  <section class="grid-container">
+  <section class="grid">
     <h2>Habilidades</h2>
-    <div class="grid-container">
+    <div class="grid">
       <dl v-for="(value, key) in habilidades" :key="key">
         <dd class="indicador">0{{ key + 1 }}.</dd>
         <dt>{{ value.title }}</dt>

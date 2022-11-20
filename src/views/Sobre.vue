@@ -1,11 +1,11 @@
 <template>
-  <section v-if="dadosApi">
+  <section v-if="dadosApi" class="container">
     <!-- DadosApi é uma variavel que vem do Mixins[Api] -->
-    <div class="container">
-      <TheTitulo class="titulo" :h1="dadosApi.title" :hasDeCor="true">
+    <div>
+      <TheTitulo class="titulo" :h1="dadosApi.title" :hasDecor="true">
       </TheTitulo>
     </div>
-    <div class="grid-container">
+    <div class="grid">
       <h2>Sobre</h2>
       <p v-html="dadosApi.texto"></p>
       <div class="sobre_img">

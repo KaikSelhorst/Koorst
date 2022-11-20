@@ -28,6 +28,7 @@ export default {
 * {
   margin: 0;
   padding: 0;
+  list-style: none;
   text-decoration: none;
   box-sizing: border-box;
 }
@@ -44,17 +45,17 @@ img {
 /* Warning is global */
 #main {
   padding-top: 52px;
-  padding-left: 200px;
+  /* padding-left: 200px; */
 }
 
-.container,
-.grid-container {
+.container {
   max-width: 955px;
+  margin: 0 auto;
   /* Warning */
-  /* margin: 0 auto; */
+  /* margin-left: 200px; */
   /* Warning */
 }
-.grid-container {
+.grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
