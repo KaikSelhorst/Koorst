@@ -1,7 +1,10 @@
 <template>
   <section class="titulo">
-    <h1>{{ h1 }}</h1>
-    <img src="../assets/decor.svg" alt="Decorador" v-if="hasDeCor" />
+    <h1 :class="{ dark: dark }">{{ h1 }}</h1>
+    <div v-if="hasDecor" class="decorador">
+      <img src="../assets/decor_dark.svg" alt="Decorador" v-if="dark" />
+      <img src="../assets/decor.svg" alt="Decorador" v-else />
+    </div>
     <slot class="slot"></slot>
   </section>
 </template>
@@ -14,9 +17,13 @@ export default {
       type: String,
       require: true,
     },
-    hasDeCor: {
+    hasDecor: {
       type: Boolean,
       require: true,
+    },
+    dark: {
+      type: Boolean,
+      require: false,
     },
   },
 };
@@ -29,7 +36,7 @@ export default {
   align-content: start;
 }
 .slot,
-img {
+.decorador {
   justify-self: right;
 }
 h1 {
@@ -42,8 +49,10 @@ h1 {
   letter-spacing: 0.05rem;
   font-weight: 700;
 }
-
-img {
+h1.dark {
+  color: #fafafa;
+}
+.decorador {
   margin-right: 120px;
 }
 </style>
