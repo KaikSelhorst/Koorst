@@ -19,6 +19,7 @@ export default {
   mixins: [api],
   created() {
     this.getApi("contato");
+    document.title = "Contato";
   },
 };
 </script>
