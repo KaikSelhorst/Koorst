@@ -5,13 +5,18 @@
         <li>
           <ul>
             <li>
-              <router-link to="/">
+              <router-link :to="{ name: 'home' }">
                 <img src="../assets/koorst.svg" alt="Koorst" />
               </router-link>
             </li>
             <li>
-              <router-link to="/sobre">
+              <router-link :to="{ name: 'sobre' }">
                 <img src="../assets/usuario.svg" alt="Sobre" />
+              </router-link>
+            </li>
+            <li>
+              <router-link :to="{ name: 'projetos' }">
+                <img src="../assets/arquivo.svg" alt="Projetos" />
               </router-link>
             </li>
           </ul>
