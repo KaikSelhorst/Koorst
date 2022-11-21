@@ -2,7 +2,7 @@
   <section class="projetosLista" v-if="projetos">
     <ul>
       <li v-for="(projeto, index) in projetos" :key="index">
-        <a href="" class="projetoItem">
+        <a :href="projeto.src" target="_blank" class="projetoItem">
           <div class="projetoItemTexto">
             <span class="s-1-e c6">{{ projeto.data }}</span>
             <h3 class="l-1-r c13">{{ projeto.name }}</h3>
