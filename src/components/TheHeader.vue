@@ -48,20 +48,30 @@ export default {
   padding: 52px 0 36px 0;
   display: grid;
   min-height: 100vh;
-  gap: 24px;
-  justify-content: center;
 }
 .nav ul {
   display: grid;
-  gap: 24px;
+  gap: 18px;
 }
-li {
-  align-self: start;
-}
+
 li:last-child {
   align-self: end;
 }
 li a {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  padding: 4px 0;
+  align-items: center;
+}
+li a.router-link-exact-active::before {
+  content: "";
+  height: 100%;
+  width: 2px;
+  position: absolute;
   display: block;
+  left: 0;
+  background: var(--c1);
+  border-radius: 0px 4px 4px 0px;
 }
 </style>
