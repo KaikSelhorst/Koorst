@@ -4,11 +4,11 @@
       <li v-for="(projeto, index) in projetos" :key="index">
         <a href="" class="projetoItem">
           <div class="projetoItemTexto">
-            <span class="s-1-e">{{ projeto.data }}</span>
-            <h3 class="l-1-r">{{ projeto.name }}</h3>
-            <p class="s-1-e">{{ projeto.texto }}</p>
+            <span class="s-1-e c6">{{ projeto.data }}</span>
+            <h3 class="l-1-r c13">{{ projeto.name }}</h3>
+            <p class="s-1-e c13">{{ projeto.texto }}</p>
           </div>
-          <span class="xxl-1-r">00{{ index + 1 }}</span>
+          <span class="xxl-1-r c12">00{{ index + 1 }}</span>
         </a>
       </li>
     </ul>
@@ -38,7 +38,7 @@ export default {
   width: 1px;
   height: 100%;
   right: 140px;
-  background: #141414;
+  background: var(--c13);
 }
 ul {
   padding: 40px 0;
@@ -53,24 +53,18 @@ ul {
   transition: all 0.3s;
 }
 .projetoItem:hover {
-  background: #fafafa;
+  background: var(--c1);
 }
 li + li {
   margin-top: 100px;
 }
 .projetoItem > span {
   grid-column: 2;
-  color: #292929;
 }
 .projetoItemTexto span {
   margin-bottom: 8px;
-  color: #a3a3a3;
-}
-.projetoItemTexto h3 {
-  color: #141414;
 }
 .projetoItemTexto p {
   max-width: 640px;
-  color: #141414;
 }
 </style>

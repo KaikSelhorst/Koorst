@@ -6,8 +6,8 @@
       </TheTitulo>
     </div>
     <div class="grid">
-      <h2 class="m-1-r">Sobre</h2>
-      <p v-html="dadosApi.texto" class="s-1-e"></p>
+      <h2 class="m-1-r c12">Sobre</h2>
+      <p v-html="dadosApi.texto" class="s-1-e c13"></p>
       <div class="sobre_img">
         <img
           src="../assets/sobre_ilustracao.jpg"
@@ -43,7 +43,6 @@ export default {
 p {
   margin-bottom: 96px;
   max-width: 430px;
-  color: #141414;
 }
 p::first-letter {
   font-size: 2rem;

@@ -43,10 +43,8 @@ img {
   grid-template-columns: 64px 1fr;
 }
 
-/* Warning is global */
 #main {
   padding-top: 52px;
-  /* padding-left: 200px; */
 }
 
 .container {
@@ -77,7 +75,6 @@ img {
 }
 
 h2 {
-  color: #292929;
   position: relative;
   text-transform: uppercase;
 }

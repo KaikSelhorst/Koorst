@@ -1,11 +1,11 @@
 <template>
   <section class="grid">
-    <h2 class="m-1-r">Habilidades</h2>
+    <h2 class="m-1-r c12">Habilidades</h2>
     <div class="grid">
       <dl v-for="(value, key) in habilidades" :key="key">
-        <dd class="indicador s-1-r">0{{ key + 1 }}.</dd>
-        <dt class="s-1-r">{{ value.title }}</dt>
-        <dd class="tool xs-1-r-t" v-for="tool in value.tools" :key="tool">
+        <dd class="indicador s-1-r c6">0{{ key + 1 }}.</dd>
+        <dt class="s-1-r c12">{{ value.title }}</dt>
+        <dd class="tool xs-1-r-t c11" v-for="tool in value.tools" :key="tool">
           {{ tool }}
         </dd>
       </dl>
@@ -32,19 +32,13 @@ h2 {
 }
 div {
   grid-column: 1 / -1;
-  font-family: "Rubik", sans-serif;
 }
 dt,
 .indicador {
-  color: #a3a3a3;
   text-transform: uppercase;
 }
 dt {
-  color: #292929;
   margin-bottom: 24px;
-}
-.tool {
-  color: #3d3d3d;
 }
 .tool::before {
   content: "";

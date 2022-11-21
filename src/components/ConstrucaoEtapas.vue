@@ -6,7 +6,7 @@
         :key="etapa.title + key"
         @click="onClick(key)"
         data-tab="title"
-        class="s-3-r"
+        class="s-3-r c11"
       >
         <span>{{ key + 1 }}.</span>
         {{ etapa.title }}
@@ -18,7 +18,7 @@
       :key="key"
       :aria-label="etapa.title"
       data-tab="content"
-      class="s-1-e"
+      class="s-1-e c6"
     >
       {{ etapa.texto }}
     </p>
@@ -89,7 +89,7 @@ export default {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding-bottom: 4px;
-  border-bottom: 1px solid #a3a3a3;
+  border-bottom: 1px solid var(--c6);
   position: relative;
   gap: 0px 75px;
 }
@@ -100,12 +100,11 @@ export default {
   transition: all 0.3s;
   height: 3px;
   bottom: -4px;
-  background: #a3a3a3;
+  background: var(--c6);
   width: 60px;
 }
 .etapas p {
   display: none;
-  color: #a3a3a3;
   grid-column: 1 / -1;
   animation: fade 0.3s forwards;
 }
@@ -127,10 +126,9 @@ export default {
   cursor: pointer;
   gap: 1px;
   align-items: center;
-  color: #3d3d3d;
 }
 
 .etapas h4.ativo {
-  color: #f0f0f0;
+  color: var(--c1);
 }
 </style>

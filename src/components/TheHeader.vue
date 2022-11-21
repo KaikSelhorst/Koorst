@@ -39,7 +39,7 @@ export default {
 
 <style scoped>
 .header {
-  background: #141414;
+  background: var(--c13);
   position: sticky;
   top: 0;
   align-self: flex-start;

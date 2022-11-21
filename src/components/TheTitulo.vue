@@ -1,6 +1,8 @@
 <template>
   <section class="titulo">
-    <h1 :class="{ dark: dark }" class="l-2-r">{{ h1 }}</h1>
+    <h1 :class="[{ dark: dark }, dark ? 'c1' : 'c12']" class="l-2-r">
+      {{ h1 }}
+    </h1>
     <div v-if="hasDecor" class="decorador">
       <img src="../assets/decor_dark.svg" alt="Decorador" v-if="dark" />
       <img src="../assets/decor.svg" alt="Decorador" v-else />
@@ -44,11 +46,10 @@ export default {
 h1 {
   max-width: 310px;
   text-transform: uppercase;
-  color: #292929;
 }
-h1.dark {
-  color: #fafafa;
-}
+/* h1.dark {
+  color: var(--c1);
+} */
 .decorador {
   margin-right: 120px;
 }

@@ -26,7 +26,7 @@ export default {
 <style scoped>
 .construcao-bg {
   position: relative;
-  background: #292929;
+  background: var(--c12);
   width: 100%;
   padding: 85px 0;
   height: 100%;

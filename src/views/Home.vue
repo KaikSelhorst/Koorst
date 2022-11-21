@@ -3,7 +3,7 @@
     <!-- DadosApi é uma variavel que vem do Mixins[Api] -->
     <div>
       <TheTitulo class="titulo" :h1="dadosApi.title" :hasDecor="false">
-        <p class="m-1-e">{{ dadosApi.texto }}</p>
+        <p class="m-1-e c12">{{ dadosApi.texto }}</p>
       </TheTitulo>
       <div>
         <img src="../assets/home_ilustracao.jpg" alt="Koorst" />
@@ -20,6 +20,7 @@ export default {
   mixins: [api],
   created() {
     this.getApi("home");
+    document.title = "Home";
   },
 };
 </script>
@@ -29,7 +30,6 @@ export default {
   margin-bottom: 40px;
 }
 p {
-  color: #292929;
   position: relative;
   max-width: 400px;
 }
@@ -40,6 +40,6 @@ p::before {
   left: -16px;
   height: 100%;
   display: block;
-  background: #292929;
+  background: var(--c12);
 }
 </style>
