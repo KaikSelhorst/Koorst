@@ -5,24 +5,40 @@
         <li>
           <ul>
             <li>
-              <router-link :to="{ name: 'home' }">
+              <router-link
+                :to="{ name: 'home' }"
+                @mouseenter.native="handleClick"
+                aria-label="Home"
+              >
                 <img src="../assets/koorst.svg" alt="Koorst" />
               </router-link>
             </li>
             <li>
-              <router-link :to="{ name: 'sobre' }">
+              <router-link
+                :to="{ name: 'sobre' }"
+                @mouseenter.native="handleClick"
+                aria-label="Sobre"
+              >
                 <img src="../assets/usuario.svg" alt="Sobre" />
               </router-link>
             </li>
             <li>
-              <router-link :to="{ name: 'projetos' }">
+              <router-link
+                :to="{ name: 'projetos' }"
+                @mouseenter.native="handleClick"
+                aria-label="Projetos"
+              >
                 <img src="../assets/arquivo.svg" alt="Projetos" />
               </router-link>
             </li>
           </ul>
         </li>
         <li>
-          <router-link to="/contato">
+          <router-link
+            to="/contato"
+            @mouseenter.native="handleClick"
+            aria-label="Contato"
+          >
             <img src="../assets/telefone.svg" alt="Contato" />
           </router-link>
         </li>
@@ -32,8 +48,16 @@
 </template>
 
 <script>
+import { ToolTip } from "@/helpers/index.js";
+const toolTip = new ToolTip("tool_tip");
+
 export default {
   name: "TheHeader",
+  methods: {
+    handleClick(event) {
+      toolTip.init(event);
+    },
+  },
 };
 </script>
 
