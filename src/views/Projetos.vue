@@ -2,7 +2,7 @@
   <section v-if="dadosApi">
     <div class="container">
       <!-- DadosApi é uma variavel que vem do Mixins[Api] -->
-      <TheTitulo class="titulo" :h1="dadosApi.title" :hasDecor="true" />
+      <TheTitulo :h1="dadosApi.title" :hasDecor="true" />
       <div class="grid">
         <div>
           <img
@@ -53,9 +53,6 @@ export default {
 </script>
 
 <style scoped>
-.titulo {
-  margin-bottom: 96px;
-}
 h2 {
   margin-bottom: 24px;
 }

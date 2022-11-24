@@ -38,6 +38,7 @@ export default {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-content: start;
+  margin-bottom: 96px;
 }
 .slot,
 .decorador {

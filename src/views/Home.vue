@@ -2,7 +2,7 @@
   <section v-if="dadosApi" class="container">
     <!-- DadosApi é uma variavel que vem do Mixins[Api] -->
     <div>
-      <TheTitulo class="titulo" :h1="dadosApi.title" :hasDecor="false">
+      <TheTitulo :h1="dadosApi.title" :hasDecor="false">
         <p class="m-1-e c12">{{ dadosApi.texto }}</p>
       </TheTitulo>
       <div>
@@ -26,9 +26,6 @@ export default {
 </script>
 
 <style scoped>
-.titulo {
-  margin-bottom: 40px;
-}
 p {
   position: relative;
   max-width: 400px;

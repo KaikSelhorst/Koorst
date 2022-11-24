@@ -28,7 +28,6 @@ export default {
 
 <style scoped>
 p {
-  margin-top: 96px;
   margin-bottom: 24px;
   max-width: 500px;
 }
