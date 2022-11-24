@@ -108,16 +108,7 @@ export default {
   grid-column: 1 / -1;
   animation: fade 0.3s forwards;
 }
-@keyframes fade {
-  from {
-    opacity: 0;
-    transform: translate3d(-20px, 0, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
+
 .etapas p.ativo {
   display: block;
 }
