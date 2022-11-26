@@ -1,32 +1,20 @@
-export class ToolTip {
-  constructor(classe) {
-    this.classe = classe;
+export function outsideClick(element, events, callback) {
+  const html = document.documentElement;
+  const outside = "data-outside";
+  function handleOutsideClick(event) {
+    if (!element.contains(event.target)) {
+      element.removeAttribute(outside);
+      events.forEach((userEvent) => {
+        html.removeEventListener(userEvent, handleOutsideClick);
+      });
+      callback();
+    }
   }
-  onMouseLeave() {
-    this.toolTip.remove();
-    this.element.removeEventListener("mouseleave", this.onMouseLeave);
-  }
-  setPosition() {
-    const { x, top, width } = this.element.getBoundingClientRect();
-    this.toolTip.style.left = `${x + width + 20}px`;
-    this.toolTip.style.top = `${top}px`;
-  }
-  criarToolTip() {
-    const toolTipBox = document.createElement("div");
-    toolTipBox.classList.add(this.classe);
-    toolTipBox.innerHTML = this.element.getAttribute("aria-label");
-    this.toolTip = toolTipBox;
-    this.setPosition();
-    return;
-  }
-  init(event) {
-    this.setBind();
-    this.element = event.currentTarget;
-    this.criarToolTip();
-    this.element.addEventListener("mouseleave", this.onMouseLeave);
-    document.body.appendChild(this.toolTip);
-  }
-  setBind() {
-    this.onMouseLeave = this.onMouseLeave.bind(this);
+
+  if (!element.hasAttribute(outside)) {
+    events.forEach((userEvent) => {
+      setTimeout(() => html.addEventListener(userEvent, handleOutsideClick));
+    });
+    element.setAttribute(outside, "");
   }
 }

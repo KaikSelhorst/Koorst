@@ -42,7 +42,11 @@ img {
   min-height: 100vh;
   grid-template-columns: 64px 1fr;
 }
-
+@media screen and (max-width: 976px) {
+  #app {
+    grid-template-columns: 1fr;
+  }
+}
 #main {
   padding-top: 52px;
 }
