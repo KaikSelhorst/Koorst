@@ -47,7 +47,7 @@ export default {
       const indicador = this.$refs.indicador;
       const indicadorX = indicador.getBoundingClientRect().x;
       const etapaX = this.tabNav.items[key].getBoundingClientRect().x;
-      indicador.style.width = Math.ceil(etapaX - indicadorX + 60) + "px";
+      indicador.style.width = `${Math.ceil(etapaX - indicadorX + 60)}px`;
       return;
     },
     removerClasses(classe) {
