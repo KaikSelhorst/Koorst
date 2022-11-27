@@ -17,4 +17,9 @@ export default {
   padding: 64px 36px 36px 36px;
   position: relative;
 }
+@media screen and (max-width: 976px) {
+  .footer {
+    grid-column: 1;
+  }
+}
 </style>

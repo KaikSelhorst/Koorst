@@ -144,31 +144,3 @@
     transform: translate3d(0, 0, 0);
   }
 }
-
-/* Tool Tip */
-
-.tool_tip {
-  background: var(--c13);
-  color: var(--c1);
-  padding: 12px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  min-width: 87px;
-  z-index: 100;
-  border-radius: 4px;
-  font: 500 0.875rem/1rem "Rubik", sans-serif;
-  animation: fade 0.3s forwards;
-}
-.tool_tip::before {
-  content: "";
-
-  display: flex;
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  left: -12px;
-
-  background: url("./assets/tool_tip_indicador.svg") no-repeat center;
-}
