@@ -49,4 +49,10 @@ dt {
   height: 12px;
   background: url("../assets/decor_font_small.svg") no-repeat center;
 }
+@media screen and (max-width: 600px) {
+  div {
+    gap: 36px;
+    grid-template-columns: 1fr;
+  }
+}
 </style>

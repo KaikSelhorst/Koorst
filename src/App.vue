@@ -58,6 +58,11 @@ img {
   /* margin-left: 200px; */
   /* Warning */
 }
+@media screen and (max-width: 976px) {
+  .container {
+    padding: 0px 12px;
+  }
+}
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
