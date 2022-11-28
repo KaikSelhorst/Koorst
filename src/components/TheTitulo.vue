@@ -44,6 +44,20 @@ export default {
 .decorador {
   justify-self: right;
 }
+@media screen and (max-width: 800px) {
+  .slot {
+    justify-self: initial;
+  }
+}
+@media screen and (max-width: 600px) {
+  .titulo {
+    grid-template-columns: 1fr;
+  }
+  .decorador {
+    display: none;
+  }
+}
+
 h1 {
   max-width: 310px;
   text-transform: uppercase;

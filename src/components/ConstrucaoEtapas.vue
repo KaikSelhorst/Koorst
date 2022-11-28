@@ -91,7 +91,7 @@ export default {
   padding-bottom: 4px;
   border-bottom: 1px solid var(--c6);
   position: relative;
-  gap: 0px 75px;
+  column-gap: 75px;
 }
 .indicador-etapa {
   text-indent: -150px;
@@ -121,5 +121,10 @@ export default {
 
 .etapas h4.ativo {
   color: var(--c1);
+}
+@media screen and (max-width: 600px) {
+  .etapas-header {
+    column-gap: 32px;
+  }
 }
 </style>

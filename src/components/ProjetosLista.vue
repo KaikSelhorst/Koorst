@@ -39,6 +39,7 @@ export default {
   height: 100%;
   right: 140px;
   background: var(--c13);
+  z-index: 200;
 }
 ul {
   padding: 40px 0;
@@ -48,7 +49,9 @@ ul {
   text-align: right;
   padding: 20px 10px;
   display: grid;
+  position: relative;
   justify-items: end;
+  grid-template-columns: 1fr minmax(auto, 200px);
   border-radius: 1px;
   transition: all 0.3s;
 }
@@ -58,13 +61,30 @@ ul {
 li + li {
   margin-top: 100px;
 }
-.projetoItem > span {
-  grid-column: 2;
-}
 .projetoItemTexto span {
   margin-bottom: 8px;
 }
 .projetoItemTexto p {
   max-width: 640px;
+}
+
+@media screen and (max-width: 600px) {
+  .projetosLista::before {
+    display: none;
+  }
+  .projetoItem {
+    grid-template-columns: 1fr;
+    padding: 36px 10px;
+  }
+  .projetoItem > span {
+    position: absolute;
+    left: 10px;
+    top: 24px;
+    font-size: 4rem;
+    color: var(--c2);
+  }
+  ul li:nth-child(even) .projetoItem {
+    background: var(--c1);
+  }
 }
 </style>

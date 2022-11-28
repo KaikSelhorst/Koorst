@@ -4,7 +4,7 @@
       <!-- DadosApi é uma variavel que vem do Mixins[Api] -->
       <TheTitulo :h1="dadosApi.title" :hasDecor="true" />
       <div class="grid">
-        <div>
+        <div class="projetos_img">
           <img
             src="../assets/projetos_ilustracao.jpg"
             alt="Mockup simples da Koorst"
@@ -27,7 +27,7 @@
     <div class="container contato">
       <span class="xs-2-r c8">Precisa de algum design ou desenvolvedor</span>
       <router-link :to="{ name: 'contato' }">
-        <h1 class="xxl-1-r c12">Vamos trabalhar juntos</h1>
+        <h1 class="xxl-1-r c12">Vamos trabalhar <span>juntos</span></h1>
       </router-link>
     </div>
   </section>
@@ -58,7 +58,7 @@ h2 {
 }
 
 p {
-  text-indent: 24px;
+  text-indent: 16px;
   display: block;
   max-width: 450px;
 }
@@ -74,19 +74,44 @@ p + p {
   margin-bottom: 96px;
   text-align: center;
 }
-
-.contato h1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
+@media screen and (max-width: 600px) {
+  .contato {
+    text-align: left;
+  }
 }
-.contato h1::after {
+.contato h1 {
+  display: block;
+}
+.contato h1 span {
+  display: inline-block;
+}
+.contato h1 span::after {
   content: "";
   width: 48px;
   height: 48px;
-  display: block;
+  top: 10px;
+  display: inline-block;
   position: relative;
   background: url("../assets/seta.svg") no-repeat center;
+}
+@media screen and (max-width: 720px) {
+  .grid {
+    grid-template-columns: 1fr;
+    margin-bottom: 40px;
+  }
+  .projetos_texto p {
+    max-width: 70ch;
+  }
+  .projetos_img {
+    margin-top: 40px;
+    order: 2;
+  }
+  .contato h1 {
+    margin-top: 4px;
+  }
+  .contato h1 span::after {
+    top: 14px;
+    background-size: 32px;
+  }
 }
 </style>

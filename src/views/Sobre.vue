@@ -51,4 +51,16 @@ p::first-letter {
 .habilidades {
   margin-bottom: 96px;
 }
+@media screen and (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  p {
+    max-width: 50ch;
+    margin-top: 16px;
+  }
+  .habilidades {
+    margin-bottom: 48px;
+  }
+}
 </style>

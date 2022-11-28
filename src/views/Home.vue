@@ -39,4 +39,15 @@ p::before {
   display: block;
   background: var(--c12);
 }
+@media screen and (max-width: 800px) {
+  p {
+    margin-top: 16px;
+    font: 400 1.125rem/2rem "Eczar", sans-serif;
+    max-width: 70ch;
+    letter-spacing: 0.01rem;
+  }
+  p::before {
+    display: none;
+  }
+}
 </style>
