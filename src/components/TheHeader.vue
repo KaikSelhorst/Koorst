@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header" ref="Header">
     <nav>
       <button
         :class="['btn-mobile', 'c1', { active: active }]"
@@ -67,9 +67,9 @@ export default {
     openMenuMobile() {
       this.adicionarClasseAtiva();
       outsideClick(
-        document.querySelector(".header"),
+        this.$refs.Header,
         ["click", "touchstart"],
-        this.adicionarClasseAtiva
+        () => (this.active = false)
       );
     },
     adicionarClasseAtiva() {
@@ -131,13 +131,14 @@ li a.router-link-exact-active::before {
     position: fixed;
     background: transparent;
     height: auto;
+    width: auto;
   }
   .nav {
     top: 0;
     left: 0;
     display: none;
     background: var(--c13);
-    position: fixed;
+    position: absolute;
     animation: fade 0.3s forwards;
   }
   li a {
