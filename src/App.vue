@@ -54,9 +54,6 @@ img {
 .container {
   max-width: 955px;
   margin: 0 auto;
-  /* Warning */
-  /* margin-left: 200px; */
-  /* Warning */
 }
 @media screen and (max-width: 976px) {
   .container {

@@ -1,35 +1,41 @@
 <template>
-  <section v-if="dadosApi">
-    <div class="container">
-      <!-- DadosApi é uma variavel que vem do Mixins[Api] -->
-      <TheTitulo :h1="dadosApi.title" :hasDecor="true" />
-      <div class="grid">
-        <div class="projetos_img">
-          <img
-            src="../assets/projetos_ilustracao.jpg"
-            alt="Mockup simples da Koorst"
-          />
+  <section>
+    <div v-if="dadosApi">
+      <div class="container">
+        <!-- DadosApi é uma variavel que vem do Mixins[Api] -->
+        <TheTitulo :h1="dadosApi.title" :hasDecor="true" />
+        <div class="grid">
+          <div class="projetos_img">
+            <img
+              src="../assets/projetos_ilustracao.jpg"
+              alt="Mockup simples da Koorst"
+            />
+          </div>
+          <div class="projetos_texto">
+            <h2 class="m-1-r c12">Projetos</h2>
+            <p
+              v-for="(frase, index) in dadosApi.texto"
+              :key="index"
+              v-html="frase"
+              class="s-1-e c13"
+            ></p>
+          </div>
         </div>
-        <div class="projetos_texto">
-          <h2 class="m-1-r c12">Projetos</h2>
-          <p
-            v-for="(frase, index) in dadosApi.texto"
-            :key="index"
-            v-html="frase"
-            class="s-1-e c13"
-          ></p>
-        </div>
+        <ProjetosLista
+          :projetos="dadosApi.projetos_list"
+          class="projetosLista"
+        />
       </div>
-      <ProjetosLista :projetos="dadosApi.projetos_list" class="projetosLista" />
+      <!-- componente não deve respeitar a .container -->
+      <ProjetosConstrucao :construcao="dadosApi.construcao" />
+      <div class="container contato">
+        <span class="xs-2-r c8">Precisa de algum design ou desenvolvedor</span>
+        <router-link :to="{ name: 'contato' }">
+          <h1 class="xxl-1-r c12">Vamos trabalhar <span>juntos</span></h1>
+        </router-link>
+      </div>
     </div>
-    <!-- componente não deve respeitar a .container -->
-    <ProjetosConstrucao :construcao="dadosApi.construcao" />
-    <div class="container contato">
-      <span class="xs-2-r c8">Precisa de algum design ou desenvolvedor</span>
-      <router-link :to="{ name: 'contato' }">
-        <h1 class="xxl-1-r c12">Vamos trabalhar <span>juntos</span></h1>
-      </router-link>
-    </div>
+    <TheLoading v-else />
   </section>
 </template>
 

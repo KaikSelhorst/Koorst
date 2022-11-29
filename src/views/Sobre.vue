@@ -1,20 +1,25 @@
 <template>
-  <section v-if="dadosApi" class="container">
-    <!-- DadosApi é uma variavel que vem do Mixins[Api] -->
-    <div>
-      <TheTitulo :h1="dadosApi.title" :hasDecor="true"> </TheTitulo>
-    </div>
-    <div class="grid">
-      <h2 class="m-1-r c12">Sobre</h2>
-      <p v-html="dadosApi.texto" class="s-1-e c13"></p>
-      <div class="sobre_img">
-        <img
-          src="../assets/sobre_ilustracao.jpg"
-          alt="Mockup simples da Koorst"
-        />
+  <section>
+    <div v-if="dadosApi" class="container">
+      <div>
+        <TheTitulo :h1="dadosApi.title" :hasDecor="true"> </TheTitulo>
       </div>
+      <div class="grid">
+        <h2 class="m-1-r c12">Sobre</h2>
+        <p v-html="dadosApi.texto" class="s-1-e c13"></p>
+        <div class="sobre_img">
+          <img
+            src="../assets/sobre_ilustracao.jpg"
+            alt="Mockup simples da Koorst"
+          />
+        </div>
+      </div>
+      <SobreHabilidades
+        :habilidades="dadosApi.habilidades"
+        class="habilidades"
+      />
     </div>
-    <SobreHabilidades :habilidades="dadosApi.habilidades" class="habilidades" />
+    <TheLoading v-else />
   </section>
 </template>
 

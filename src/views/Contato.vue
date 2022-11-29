@@ -1,15 +1,18 @@
 <template>
-  <section class="container" v-if="dadosApi">
-    <TheTitulo :h1="dadosApi.title" :hasDecor="true" />
-    <p class="s-1-e c13">{{ dadosApi.texto }}</p>
+  <section>
+    <div class="container" v-if="dadosApi">
+      <TheTitulo :h1="dadosApi.title" :hasDecor="true" />
+      <p class="s-1-e c13">{{ dadosApi.texto }}</p>
 
-    <ul v-if="dadosApi.redes">
-      <li v-for="(rede, key) in dadosApi.redes" :key="key">
-        <a :href="rede.url" target="_blank" class="s-4-r c11">{{
-          rede.name
-        }}</a>
-      </li>
-    </ul>
+      <ul v-if="dadosApi.redes">
+        <li v-for="(rede, key) in dadosApi.redes" :key="key">
+          <a :href="rede.url" target="_blank" class="s-4-r c11">{{
+            rede.name
+          }}</a>
+        </li>
+      </ul>
+    </div>
+    <TheLoading v-else />
   </section>
 </template>
 

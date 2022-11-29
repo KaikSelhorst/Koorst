@@ -1,14 +1,16 @@
 <template>
-  <section v-if="dadosApi" class="container">
-    <!-- DadosApi é uma variavel que vem do Mixins[Api] -->
-    <div>
-      <TheTitulo :h1="dadosApi.title" :hasDecor="false">
-        <p class="m-1-e c12">{{ dadosApi.texto }}</p>
-      </TheTitulo>
+  <section>
+    <div v-if="dadosApi" class="container">
       <div>
-        <img src="../assets/home_ilustracao.jpg" alt="Koorst" />
+        <TheTitulo :h1="dadosApi.title" :hasDecor="false">
+          <p class="m-1-e c12">{{ dadosApi.texto }}</p>
+        </TheTitulo>
+        <div>
+          <img src="../assets/home_ilustracao.jpg" alt="Koorst" />
+        </div>
       </div>
     </div>
+    <TheLoading v-else />
   </section>
 </template>
 
