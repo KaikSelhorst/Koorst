@@ -139,7 +139,7 @@ li a.router-link-exact-active::before {
     display: none;
     background: var(--c13);
     position: absolute;
-    animation: fade 0.3s forwards;
+    animation: left 0.3s forwards;
   }
   li a {
     padding: 0.3rem 1rem;

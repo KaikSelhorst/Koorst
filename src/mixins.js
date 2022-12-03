@@ -1,3 +1,5 @@
+import { scrollAnime } from "./helpers/index.js";
+
 export const api = {
   data() {
     return {
@@ -11,6 +13,7 @@ export const api = {
       );
       const data = await response.json();
       this.dadosApi = data;
+      setTimeout(() => scrollAnime("[data-anime]"), 0);
       return;
     },
   },

@@ -1,5 +1,5 @@
 <template>
-  <section class="projetosLista" v-if="projetos">
+  <section class="projetosLista" v-if="projetos" data-anime="left">
     <ul>
       <li v-for="(projeto, index) in projetos" :key="index">
         <a :href="projeto.src" target="_blank" class="projetoItem">

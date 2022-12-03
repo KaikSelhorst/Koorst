@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div v-if="dadosApi">
+    <div v-if="dadosApi" data-anime="left">
       <div class="container">
         <!-- DadosApi é uma variavel que vem do Mixins[Api] -->
         <TheTitulo :h1="dadosApi.title" :hasDecor="true" />
@@ -28,7 +28,7 @@
       </div>
       <!-- componente não deve respeitar a .container -->
       <ProjetosConstrucao :construcao="dadosApi.construcao" />
-      <div class="container contato">
+      <div class="container contato" data-anime="bottom">
         <span class="xs-2-r c8">Precisa de algum design ou desenvolvedor</span>
         <router-link :to="{ name: 'contato' }">
           <h1 class="xxl-1-r c12">Vamos trabalhar <span>juntos</span></h1>
