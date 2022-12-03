@@ -141,9 +141,7 @@
 .c13 {
   color: var(--c13);
 }
-
-/* Fade Animation */
-@keyframes fade {
+@keyframes left {
   from {
     opacity: 0;
     transform: translate3d(-20px, 0, 0);
@@ -152,4 +150,30 @@
     opacity: 1;
     transform: translate3d(0, 0, 0);
   }
+}
+[data-anime] {
+  transition: all 0.3s;
+  opacity: 0;
+}
+[data-anime="left"] {
+  transform: translate3d(-20px, 0, 0);
+}
+[data-anime="right"] {
+  transform: translate3d(20px, 0, 0);
+}
+[data-anime="bottom"] {
+  transform: translate3d(0, 20px, 0);
+}
+
+[data-anime].left {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+[data-anime].right {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+[data-anime].bottom {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }
