@@ -56,7 +56,7 @@ export default {
   z-index: 100;
   border-radius: 4px;
   font: 500 0.875rem/1rem "Rubik", sans-serif;
-  animation: fade 0.3s forwards;
+  animation: left 0.3s forwards;
 }
 .TheToolTip > div::before {
   content: "";

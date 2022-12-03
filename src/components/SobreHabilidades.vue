@@ -1,5 +1,5 @@
 <template>
-  <section class="grid">
+  <section class="grid" data-anime="left">
     <h2 class="m-1-r c12">Habilidades</h2>
     <div class="grid">
       <dl v-for="(value, key) in habilidades" :key="key">

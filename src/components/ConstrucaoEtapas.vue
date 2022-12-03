@@ -106,7 +106,7 @@ export default {
 .etapas p {
   display: none;
   grid-column: 1 / -1;
-  animation: fade 0.3s forwards;
+  animation: left 0.3s forwards;
 }
 
 .etapas p.ativo {
