@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div v-if="dadosApi" class="container">
+    <div v-if="dadosApi" class="container" data-anime="left">
       <div>
         <TheTitulo :h1="dadosApi.title" :hasDecor="false">
           <p class="m-1-e c12">{{ dadosApi.texto }}</p>
