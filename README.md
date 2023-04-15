@@ -68,7 +68,7 @@ If you want to create an API similar to this I recommend the channel video [Scot
 
 ### License
 
-Koorst © 2021 - 22 // Some reserved rights.
+Selhorst © 2023 // Some reserved rights.
 
 ### Contact
 
